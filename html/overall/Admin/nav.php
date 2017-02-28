@@ -169,7 +169,7 @@
                                 <a href="#"><i class="icon_chat_alt"></i> Chats</a>
                             </li>
                             <li>
-                                <a href="../Controlador/sesion/logout.php"><i class="icon_key_alt"></i> Salir</a>
+                                <a href="?view=logout"><i class="icon_key_alt"></i> Salir</a>
                             </li>
                         </ul>
                     </li>

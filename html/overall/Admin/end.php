@@ -1,6 +1,5 @@
 <script src="View/js/jquery.js"></script>
 	<script src="View/js/jquery-ui-1.10.4.min.js"></script>
-    <script src="View/js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="View/js/jquery-ui-1.9.2.custom.min.js"></script>
     <!-- bootstrap -->
     <script src="View/js/bootstrap.min.js"></script>

@@ -12,21 +12,21 @@
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
 
-<link href="View/css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="View/css/style.css" rel="stylesheet" type="text/css">
-<link href="View/css/font-awesome.css" rel="stylesheet" type="text/css">
-<link href="View/css/responsive.css" rel="stylesheet" type="text/css">
-<link href="View/css/animate.css" rel="stylesheet" type="text/css">
+<link href="View/css/principal/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="View/css/principal/style.css" rel="stylesheet" type="text/css">
+<link href="View/css/principal/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="View/css/principal/responsive.css" rel="stylesheet" type="text/css">
+<link href="View/css/principal/animate.css" rel="stylesheet" type="text/css">
 
-<script type="text/javascript" src="View/js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="View/js/bootstrap.js"></script>
-<script type="text/javascript" src="View/js/jquery-scrolltofixed.js"></script>
-<script type="text/javascript" src="View/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="View/js/jquery.isotope.js"></script>
-<script type="text/javascript" src="View/js/wow.js"></script>
-<script type="text/javascript" src="View/js/classie.js"></script>
-<script type="text/javascript" src="View/js/navegacion.js"></script>
-<script type="text/javascript" src="View/js/script.js"></script>
+<script type="text/javascript" src="View/js/principal/jquery.1.8.3.min.js"></script>
+<script type="text/javascript" src="View/js/principal/bootstrap.js"></script>
+<script type="text/javascript" src="View/js/principal/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="View/js/principal/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="View/js/principal/jquery.isotope.js"></script>
+<script type="text/javascript" src="View/js/principal/wow.js"></script>
+<script type="text/javascript" src="View/js/principal/classie.js"></script>
+<script type="text/javascript" src="View/js/principal/navegacion.js"></script>
+<script type="text/javascript" src="View/js/principal/script.js"></script>
 
   <script src="View/app/js/generales.js"></script>
 
