@@ -1,6 +1,7 @@
 <?php
 if (!empty($_POST['user']) && !empty($_POST['pass'])) {
-  $db = new Conexion();
+  $con = new Conexion();
+  $db = $con->getConection();
   $user = $_POST['user'];
   $pass = Encrypt($_POST['pass']);
 
