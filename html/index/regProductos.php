@@ -2,7 +2,7 @@
 <div class="col-lg-12">
   <h3 class="page-header"><i class="fa fa-laptop"></i> PRODUCTOS</h3>
   <ol class="breadcrumb">
-    <li><i class="fa fa-home"></i><a href="../Vista/index.php">HOME</a></li>
+    <li><i class="fa fa-home"></i><a href="?view=admin">HOME</a></li>
     <li><i class="fa fa-laptop"></i>PRODUCTO</li>
     <li><i class="fa fa-table"></i>Registrar Producto</li>
   </ol>
@@ -13,7 +13,7 @@
 REGISTRAR PRODUCTO
 </header>
 <center>
-<form class="form-horizontal" method="post" enctype="multipart/form-data"  action="<?= $_SERVER["PHP_SELF"]; ?>" onsubmit="return validarCamposProducto()">
+<form class="form-horizontal" method="post" enctype="multipart/form-data"  action="" onsubmit="return validarCamposProducto()">
 <section class="register" style="height: 420px;
 width: 950px;
 margin:2em;
@@ -61,7 +61,7 @@ border-radius: 6px;
 <img id="vista" alt="Vista Previa" height="140" width="140">
 </div>
 <div class="form-group">
-<input type="submit" class="btn btn-default" values="Registrar" name="Registrar" id="Registrar">
+<input type="submit" class="btn btn-default" name="Registrar" id="Registrar">
 </div>
 </section>
 <aside>
@@ -69,11 +69,3 @@ border-radius: 6px;
 </aside>
 </form>
 </center>
-
-
-
-  <div class="text-right">
-  <div class="credits">
-        <a href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-</div>

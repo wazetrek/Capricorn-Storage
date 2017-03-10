@@ -28,9 +28,9 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="?view=regProducto">Registrar Producto</a></li>
-                          <li><a class="" href="?view=conProducto">Consultar Producto</a></li>
+                          <li><a class="" href="?view=conProductos">Consultar Producto</a></li>
                       </ul>
-                  </li>                  
+                  </li>
 
               </ul>
               <!-- sidebar menu end-->

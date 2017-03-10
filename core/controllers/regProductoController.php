@@ -5,7 +5,7 @@ $db = new Conexion();
 //precarga de categorias
 $productos=new  Producto($db->getConection());
 $registros=$productos->consultarTodoActivo();
-// fin precarga categorias
+// fin precarga categoria
 
 //registro de producto
 if (isset($_POST["Registrar"])) {
@@ -16,8 +16,8 @@ if (isset($_POST["Registrar"])) {
     $img = $_FILES["imagen"]["name"]; //nombre original de la imagen
     $parte = explode(".", $img); // exllode para partir el nombre de la imagen y la extencion
     $ruta = $_FILES["imagen"] ["tmp_name"]; // lugar de donde viene el archivo origen de la imagen
-    $destinodb = "img/". $_POST["nombre"].".".$parte[1]; //asigna el nombre enla base de datos
-    $destinoarc = "../img/". $_POST["nombre"].".".$parte[1]; // asigna el nombre en el directorio
+    $destinodb = "View/img/". $_POST["nombre"].".".$parte[1]; //asigna el nombre enla base de datos
+    $destinoarc = "View/img/". $_POST["nombre"].".".$parte[1]; // asigna el nombre en el directorio
     copy($ruta, $destinoarc); // crea la imagen en el directorio (de donde viene, para donde va)
 
     $productos->__SET("nombre", $_POST["nombre"]);
@@ -32,7 +32,7 @@ if (isset($_POST["Registrar"])) {
 
    $productos->registrarProducto();
       header("location:?view=regProducto");
- }
+    }
  }
  include_once(HTML_DIR."overall/Admin/header.php");
  include_once(HTML_DIR."overall/Admin/nav.php");
