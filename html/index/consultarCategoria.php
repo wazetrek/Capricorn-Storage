@@ -2,29 +2,46 @@
   <div class="col-lg-12">
     <h3 class="page-header"><i class="fa fa-table"></i> Categorías</h3>
     <ol class="breadcrumb">
-      <li><i class="fa fa-home"></i><a href="?view=admin">inicio</a></li>
+      <li><i class="fa fa-home"></i><a href="index.php">HOME</a></li>
+      <li><i class="fa fa-laptop"></i>CATEGORÍA</li>
       <li><i class="fa fa-table"></i>Consultar Categorías</li>
-
     </ol>
   </div>
 
-        <div class="row">
-            <div class="col-lg-12">
-                <section class="panel">
+
                     <header class="panel-heading">
-                      Consultar Cotización
+                      CONSULTAR CATEGORÍA
                     </header>
-                    <section class="panel-heading" style="margin:1em; padding:1em;">
-                      <form action="consultarCategoria.php" method="post">
-                      <p><h5>Nombre:</h5></p>
-                      <input type="text" name="nomcat" placeholder="Ingrese el nombre que desea consultar" style=" width:300px;">
-                      <button type="submit" class="btn btn-default" name="Buscar" id="Buscar">Buscar</button>
-                      <button type="submit" class="btn btn-default" name="BuscarTodo" id="BuscarTodo">BuscarTodo</button>
+                      <center>
+                        <section style="
+                          height: 220px;
+                          width: 950px;
+                          margin:2em;
+                          padding:1em;
+                          background: white;
+                          color: black;
+                          border-radius: 6px;
+                          -webkit-box-shadow: 11px 11px 7px -8px rgba(113,129,163,1);
+                         -moz-box-shadow: 11px 11px 7px -8px rgba(113,129,163,1);
+                         -box-shadow: 11px 11px 7px -8px rgba(113,129,163,1);">
+                      <form action="" method="post" onsubmit="return validarCamposBuscarCategoria()">
+                          <p><h4>Formulario de Consulta:</h4></p>
+                      <p><h5>Nombre de la Categoría:</h5></p>
+                       <div class="form-group">
+                      <input type="text" name="nomcat" id="nomcat" placeholder="Ingrese el nombre que desea consultar" style=" width:300px;">
+                    </div>
+                      <button style="margin:5px;" type="submit" class="btn btn-default" name="Buscar" id="Buscar">Buscar</button>
+
+                      </form>
+                      <form class="" action="" method="post">
+                        <button style="background:#83A9C6;" type="submit" class="btn btn-default" name="BuscarTodo" id="BuscarTodo">BuscarTodo</button>
                       </form>
                       </section>
-                      <div class="panel-body">
-                       <div class="col-lg-12">
-                <section class="panel">
+                      <aside>
+                        <h3>Capricorn</h3><img src="../img/logoc.jpg" height="120" width="100"><h3>Storage</h3>
+                      </aside>
+                    </center>
+
                     <header class="panel-heading">
                         Cotizaciones
                     </header>
@@ -34,58 +51,51 @@
                         <tr>
                            <th><i class="icon_profile"></i> Id</th>
                            <th><i class="icon_calendar"></i> Nombre </th>
+                           <th><i class="icon_calendar"></i> Estado </th>
                            <th><i class="icon_cogs"></i> Acciones</th>
                         </tr>
 
                           <!-- Este foreach tiene una estructura distinta -->
+
+
+                          <form id="resultCat" name="resultCat" action="" method="post">
+
+
                         <?php
+                        if ($registros>0) {
+
+
                             foreach ($registros as $todos):?>
                         <tr>
-                           <td><?= $todos->idCategoria?></td>
-                           <td><?= $todos->nombre?></td>
+                           <td id="idcat" name="idcat"><?php echo $fac=$todos->idCategoria ?></td>
+                           <td><?= $todos->nombre_categoria?></td>
+                           <td name="estcat" id="estcat">
+                             <?php
+                             $est=$todos->estado_categoria;
+                            if ($todos->estado_categoria==1) {
+                             echo "Habilitado";
+                           }else if($todos->estado_categoria==0){
+                             echo "Deshabilitado";
+
+                           } ?></td>
                            <td>
+                             <input type="hidden" name="uno" id="uno" value="<?php echo $todos->idCategoria ?>">
+                             <input type="hidden" name="dos" id="dos" value="<?php echo $todos->estado_categoria ?>">
                             <div class="btn-group">
-                              <button type="button" class="open">Actualizar</button>
+                              <button id="btnAct"  type="button" name="actualizar" class="open">Cambiar Nombre</button>
+                              <button type="submit" id="cambiar" name="cambiar" class="cambiar" onclick="cambiarEstado();">Cambiar Estado</button>
                             </div>
                             </td>
                         </tr>
 
+
                         <?php
                           endforeach;
-
+                          }
                          ?>
-                    <!-- href="Modelo/editarEmpleado.php?usuario=<?= $todos->usuario ?> & password=<?= $todos->password ?> & correo=<?= $todos->email ?>" -->
-
-                         <!-- <div class="modal fade" id="modali" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-                    <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="Titulo">Actualizar Usuario de Empleado</h4>
-                    </div>
-                    <div class="modal-body">
-                    <form>
-                    <div class="form-group" >
-                    <label for="recipient-name" class="control-label">Usuario:</label>
-                    <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="form-group">
-                    <label for="recipient-name" class="control-label">Contraseña:</label>
-                    <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="form-group">
-                    <label for="recipient-name" class="control-label">Correo:</label>
-                    <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    </form>
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Actualizar</button>
-                    </div>
-                    </div>
-                    </div>
-                    </div> -->
-
+                         </form>
                      </tbody>
                     </table>
+
+                </section>
+            </div>
