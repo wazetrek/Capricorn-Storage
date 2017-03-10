@@ -30,7 +30,20 @@
                           <li><a class="" href="?view=regProducto">Registrar Producto</a></li>
                           <li><a class="" href="?view=conProducto">Consultar Producto</a></li>
                       </ul>
-                  </li>                  
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_desktop"></i>
+                          <span>Holas</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="?view=hola">Registrar Holas</a></li>
+                          <li><a class="" href="?view=hola">consultar Holas</a></li>
+                          <li><a class="" href="?view=hola">eliminarHolas Holas</a></li>
+                      </ul>
+                  </li>
 
               </ul>
               <!-- sidebar menu end-->

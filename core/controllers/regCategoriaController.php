@@ -1,17 +1,5 @@
 <?php
 
-include (MODEL_DIR.'class.Categoria.php');
-
-$db = new Conexion();
-
-if (isset($_POST["Registrar"])) {
-  $cate=$_POST['nombrecatego'];
-    $obj=new Categoria($db->getConection());
-    $obj->registrarCategoria($cate);
-    header("location:?view=regCategoria");
-}
-
-
   include_once(HTML_DIR."overall/Admin/header.php");
   include_once(HTML_DIR."overall/Admin/nav.php");
   include_once(HTML_DIR."overall/Admin/menus.php");
