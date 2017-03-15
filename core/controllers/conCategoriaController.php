@@ -9,7 +9,10 @@
 		if (isset($_POST["Buscar"])) {
 			$cate=$_POST["nomcat"];
 			$registros=$obj->consultarCategoria($cate);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 		}else if (isset($_POST["BuscarTodo"])) {
 
 			$registros=$obj->consultarTodo();
@@ -22,6 +25,7 @@
 			$nom=$_POST['nomcat2'];
 			$obj->actualizarCategoria($id, $nom);
 		}
+<<<<<<< HEAD
  //Cambiar estado
 		if (isset($_POST["cambiar"])) {
 	    $cambiar = $_POST["cambiar"];
@@ -32,6 +36,19 @@
 	      $obj->cambiarEstado($partes[0], 0);
 	    }
 	  
+=======
+
+		if(isset($_REQUEST["cambiar"])){
+			$est=$_POST["dos"];
+			$fac=$_POST["uno"];
+			if ($est==0) {
+				$obj->cambiarEstado($fac, 1);
+			}else if($est==1){
+				$obj->cambiarEstado($fac, 0);
+			}
+
+			echo $fac."-".$est;
+>>>>>>> origin/master
 
 		}
 

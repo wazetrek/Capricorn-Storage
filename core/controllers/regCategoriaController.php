@@ -5,8 +5,12 @@ include (MODEL_DIR.'class.Categoria.php');
 $db = new Conexion();
 
 if (isset($_POST["Registrar"])) {
+<<<<<<< HEAD
 
     $cate=$_POST['nombrecatego'];
+=======
+  $cate=$_POST['nombrecatego'];
+>>>>>>> origin/master
     $obj=new Categoria($db->getConection());
     $obj->registrarCategoria($cate);
     header("location:?view=regCategoria");

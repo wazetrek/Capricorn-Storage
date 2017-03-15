@@ -39,7 +39,13 @@
 	<script src="View/js/sparklines.js"></script>
 	<script src="View/js/charts.js"></script>
 	<script src="View/js/jquery.slimscroll.min.js"></script>
+<<<<<<< HEAD
 	<script type="text/javascript"src="View/js/admin/preview.js"></script>
+=======
+
+	<script type="text/javascript" src="View/js/admin/preview.js"></script>
+
+>>>>>>> origin/master
 
 	<!-- script Validaciones -->
 	<script type="text/javascript" src="View/js/admin/validarCampos.js"></script>

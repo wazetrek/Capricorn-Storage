@@ -33,13 +33,22 @@ class Producto
 
   function registrarProducto()
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
       $sql="INSERT INTO tbl_producto(nombre,precio,estado_producto,idCategoria,imagen) VALUES (:nombre,:precio,:estado,:idCategoria,:imagen)";
       $resultado=$this->con->prepare($sql);
       $arrayDatos = array(':nombre' => $this->nombre,':precio'=>$this->precio,':estado'=>$this->estado,':idCategoria'=>$this->categoria,':imagen'=>$this->imagen);
       $resultado->execute($arrayDatos);
+<<<<<<< HEAD
       
   }
     
+=======
+  }
+
+>>>>>>> origin/master
   public function consultarTodo()
   {
     $sql = "SELECT * FROM tbl_producto p JOIN tbl_categoria c ON p.idCategoria = c.idCategoria";
@@ -77,11 +86,29 @@ class Producto
   }
 
   public function actualizarProducto(){
+<<<<<<< HEAD
+=======
+    $sql1="SELECT idCategoria FROM tbl_categoria WHERE nombre_categoria=:categoria";
+    $stm1=$this->con->prepare($sql1);
+    $stm1->bindValue(':categoria', $this->categoria);
+    $stm1->execute();
+    $nombre=$stm1->fetchAll(PDO::FETCH_OBJ);
+    $prueba="";
+
+    foreach ($nombre as $jolo) {
+      $prueba=$jolo->idCategoria;
+    }
+
+>>>>>>> origin/master
     $sql="UPDATE tbl_producto SET nombre=:nombre, precio=:precio, idCategoria=:idCategoria, imagen=:imagen WHERE idProducto=:idProducto";
     $stm=$this->con->prepare($sql);
     $stm->bindValue(':nombre', $this->nombre);
     $stm->bindValue(':precio', $this->precio);
+<<<<<<< HEAD
     $stm->bindValue(':idCategoria',$this->categoria);
+=======
+    $stm->bindValue(':idCategoria',$prueba);
+>>>>>>> origin/master
     $stm->bindValue(':imagen', $this->imagen);
     $stm->bindValue(':idProducto', $this->idProducto);
     $stm->execute();
@@ -100,8 +127,13 @@ class Producto
 
   function consultarTodoActivo(){
 
+<<<<<<< HEAD
     $result=$this->con->query("SELECT * FROM tbl_categoria WHERE estado_categoria=1")->fetchAll(PDO::FETCH_OBJ);
     return $result;
+=======
+    $registros=$this->con->query("SELECT * FROM tbl_categoria WHERE estado_categoria=1")->fetchAll(PDO::FETCH_OBJ);
+    return $registros;
+>>>>>>> origin/master
 
   }
 

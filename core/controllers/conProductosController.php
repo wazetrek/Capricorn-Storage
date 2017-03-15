@@ -1,9 +1,17 @@
 <?php
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
     include(MODEL_DIR."class.Productos.php");
     $db = new Conexion();
     $obj=new Producto ($db->getConection());
 
+<<<<<<< HEAD
 	$result=$obj->consultarTodoActivo();
+=======
+>>>>>>> origin/master
 
 /*$nom=$_POST["nombreProducto"];
 	$cate=$_POST["categoria"];
@@ -39,6 +47,7 @@ if (isset($_POST["Buscar"])) {
 
 if(isset($_POST['Actualizar'])){
 
+<<<<<<< HEAD
 	$obj->__SET("idProducto", $_POST["cat2"]);
 	if($_POST["nombreProducto"]==null){
         $obj->__SET("nombre", $_POST["nombreProAct"]);
@@ -61,6 +70,15 @@ if(isset($_POST['Actualizar'])){
 
 	if (! isset($_FILES["imagen"]) || $_FILES["imagen"]["error"] > 0) { // no existe la imagen? || hay errores?
 		$obj->__SET("imagen", $_POST["imgProAct"]);
+=======
+
+	$obj->__SET("idProducto", $_POST["cat2"]);
+	$obj->__SET("nombre", $_POST["nombreProducto"]);
+	$obj->__SET("precio", $_POST["precio"]);
+	$obj->__SET("categoria", $_POST["nomcat"]);
+	if (! isset($_FILES["imagen"]) || $_FILES["imagen"]["error"] > 0) { // no existe la imagen? || hay errores?
+		echo "ME CAES MAL";
+>>>>>>> origin/master
 	}else{
 	$img = $_FILES["imagen"]["name"]; //nombre original de la imagen
 
@@ -71,6 +89,7 @@ if(isset($_POST['Actualizar'])){
 	unlink($destinoarc);
 	copy($ruta, $destinoarc);
 	$obj->__SET("imagen", $destinodb);
+<<<<<<< HEAD
 }
     $obj->actualizarProducto();
 }
@@ -78,6 +97,17 @@ if(isset($_POST['Actualizar'])){
 /*if (isset($_REQUEST["cambiar"])) {
 
   	$id=$_POST["uno"];
+=======
+
+	$obj->actualizarProducto();
+}
+	//$obj->__SET("imagen", $_POST["imagen"]);
+}
+
+if (isset($_REQUEST["cambiar"])) {
+
+	$id=$_POST["uno"];
+>>>>>>> origin/master
 	$est=$_POST["dos"];
 	if ($est==0) {
 		$obj->cambiarEstado($id, 1);
@@ -85,6 +115,7 @@ if(isset($_POST['Actualizar'])){
 		$obj->cambiarEstado($id, 0);
 	}
 	echo $id."-".$est;
+<<<<<<< HEAD
 }*/
 
   if (isset($_POST["cambiar"])) {
@@ -105,5 +136,14 @@ include_once(HTML_DIR."overall/Admin/header.php");
     include('html/index/consultarProducto.php');
   include_once(HTML_DIR."overall/Admin/footer.php");
   include_once(HTML_DIR."overall/Admin/end.php");
+=======
+}
+include_once(HTML_DIR."overall/Admin/header.php");
+include_once(HTML_DIR."overall/Admin/nav.php");
+include_once(HTML_DIR."overall/Admin/menus.php");
+include('html/index/consultarProductos.php');
+include_once(HTML_DIR."overall/Admin/footer.php");
+include_once(HTML_DIR."overall/Admin/end.php");
+>>>>>>> origin/master
 
 ?>

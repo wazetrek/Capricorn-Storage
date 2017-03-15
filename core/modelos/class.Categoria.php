@@ -12,21 +12,33 @@ class Categoria
 
   function registrarCategoria($nombre)
   {
+<<<<<<< HEAD
   
       $sql="SELECT * FROM tbl_categoria WHERE nombre_categoria=:nombre";
+=======
+      $sql="SELECT* FROM tbl_categoria WHERE nombre_categoria=:nombre";
+>>>>>>> origin/master
       $resultado=$this->con->prepare($sql);
       $arrayDatos= array(':nombre' => $nombre);
       $resultado->execute($arrayDatos);
       if ($resultado->fetch()>0) {
+<<<<<<< HEAD
         echo "YA EXISTE O ESO CREO, NO ME JODA SURRON";
+=======
+        echo "YA EXISTE O ESO CREO, NO ME JODA SURRON ";
+>>>>>>> origin/master
       }else{
       $sql="INSERT INTO tbl_categoria(nombre_categoria) VALUES (:nombre)";
       $resultado=$this->con->prepare($sql);
       $arrayDatos = array(':nombre' => $nombre);
       $resultado->execute($arrayDatos);
     }
+<<<<<<< HEAD
   
 }
+=======
+  }
+>>>>>>> origin/master
 
     function consultarCategoria($cate){
 
@@ -61,12 +73,15 @@ class Categoria
     }
 
     function actualizarCategoria($id, $nom){
+<<<<<<< HEAD
         $this->con->query1("SELECT nombre_categoria FROM tbl_categoria WHERE nombre_categoria='".$nom."'");
         if(isset($this)){
           echo "esta categoria ya existe no la puede actualizar con ese nombre, surron asqueroso";
         }else{
 
         }
+=======
+>>>>>>> origin/master
       $this->con->query("UPDATE tbl_categoria SET nombre_categoria='".$nom."' WHERE idCategoria='".$id."'");
     }
 
@@ -74,4 +89,9 @@ class Categoria
       $this->con->query("UPDATE tbl_categoria SET estado_categoria='".$est."' WHERE idCategoria='".$id."'");
     }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
 ?>

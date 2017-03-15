@@ -82,11 +82,21 @@
                              <input type="hidden" name="uno" id="uno" value="<?php echo $todos->idCategoria ?>">
                              <input type="hidden" name="dos" id="dos" value="<?php echo $todos->estado_categoria ?>">
                             <div class="btn-group">
+<<<<<<< HEAD
                               <button id="btnAct"  type="button" name="actualizar"  class="open">Cambiar Nombre</button>
                               <button type="submit" id="cambiar" name="cambiar" class="cambiar" value="<?= $todos->idCategoria."-".$todos->estado_categoria ?>">Cambiar Estado</button>
                             </div>
                             </td>
                         </tr>
+=======
+                              <button id="btnAct"  type="button" name="actualizar" class="open">Cambiar Nombre</button>
+                              <button type="submit" id="cambiar" name="cambiar" class="cambiar" onclick="cambiarEstado();">Cambiar Estado</button>
+                            </div>
+                            </td>
+                        </tr>
+
+
+>>>>>>> origin/master
                         <?php
                           endforeach;
                           }
@@ -97,6 +107,7 @@
 
                 </section>
             </div>
+<<<<<<< HEAD
           <style>
 
         .artAct{
@@ -162,3 +173,5 @@
       <script type="text/javascript" src="View/js/admin/modal.js">
 
       </script>
+=======
+>>>>>>> origin/master

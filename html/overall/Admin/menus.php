@@ -30,7 +30,11 @@
                           <li><a class="" href="?view=regProducto">Registrar Producto</a></li>
                           <li><a class="" href="?view=conProductos">Consultar Producto</a></li>
                       </ul>
+<<<<<<< HEAD
                   </li>                  
+=======
+                  </li>
+>>>>>>> origin/master
 
               </ul>
               <!-- sidebar menu end-->

@@ -79,6 +79,7 @@ function validarCamposModalProducto(){
 
 function validarCamposModalCategoria(){
  var nomcatego=document.getElementById("nomcat2").value;
+<<<<<<< HEAD
 
     if(nomcatego==""){
       window.alert("el campo nombre esta vacio");
@@ -99,3 +100,11 @@ function validarCamposModalCategoria(){
 	    }
 	  }
 */
+=======
+    if(nomcatego==""){
+      window.alert("el campo nombre esta vacio");
+      return false;
+
+  }
+}
+>>>>>>> origin/master
