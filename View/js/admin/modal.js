@@ -1,0 +1,30 @@
+$(document).ready(function(){
+  $('.open').click(function(){
+    $('.modal').toggle('slow');
+    var id="";
+    $(this).parents("tr").find("#idcat").each(function(){
+      id=$(this).html();
+      document.actCategoria.cat2.value=id;
+    })
+    $(this).parents("tr").find("#nombArt").each(function(){
+      id=$(this).html();
+      document.actCategoria.nombreProAct.value=id;
+    })
+    $(this).parents("tr").find("#preArt").each(function(){
+      id=$(this).html();
+      document.actCategoria.precioProAct.value=id;
+    })
+    $(this).parents("tr").find("#nomCat").each(function(){
+      id=$(this).html();
+      document.actCategoria.nomCatAct.value=id;
+    })
+    $(this).parents("tr").find("#tres").each(function(){
+      id=$(this).html();
+      id="View".id;
+      document.actCategoria.imgProAct.value=id;
+    })
+  });
+  $('.closeModel').click(function(){
+    $('.modal').css({display:"none"});
+  })
+});

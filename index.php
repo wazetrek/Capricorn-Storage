@@ -10,6 +10,5 @@
   }else {
     include('core/Controllers/indexController.php');
   }
-
-
+  
  ?>

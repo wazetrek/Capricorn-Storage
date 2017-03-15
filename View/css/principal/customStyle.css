@@ -1,0 +1,12 @@
+.actualizarCategoria{
+    width: 10%;
+    margin: 15px;
+    display: inline-block;
+    margin-left: 22em;
+}
+
+#dataActual{
+  border-radius: 6px;
+  padding: 20px;
+  background: #E3E3E3;
+}

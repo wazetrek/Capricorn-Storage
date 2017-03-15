@@ -20,7 +20,7 @@
 
     <title></title>
     <link rel="shorcut icon" type="text/css" href="View/img/icono.png">
-
+    <link rel="stylesheet" href="View/css/principal/customStyle.css">
     <!-- Bootstrap CSS -->
     <link href="View/css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
